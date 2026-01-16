@@ -8,7 +8,7 @@ function App() {
   return (
     <>
  
-<Navbar title='Helo guys'/>
+<Navbar title='Helo guys' news='about news' home='about home'/>
     </>
   );
 }
