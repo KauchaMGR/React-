@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function textform() {
+export default function TextForm() {  // Change from textform to TextForm
   return (
     <div>
       <div className="mb-3">
