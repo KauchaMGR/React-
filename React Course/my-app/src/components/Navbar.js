@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'  // Add this import
 
-export default function Navbar(props) {
+export default function Navbar(props
+) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -35,7 +36,7 @@ Navbar.propTypes = {
   news: PropTypes.string
 }
 Navbar.defaultProps={
-    title:'hey its test',
-    home:'i am home',
-    news:'i am news'
+    title:"hey its test",
+    home:"i am home",
+    news:"i am news"
 }

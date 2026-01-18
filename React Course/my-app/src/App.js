@@ -7,8 +7,8 @@ let name= "dipeen kaucha Magar";
 function App() {
   return (
     <>
- 
-<Navbar/>
+  
+<Navbar title="textUtils" home="about home" news="about news" />
 
     </>
   );
