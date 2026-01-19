@@ -4,12 +4,15 @@ import React,{useState}from 'react'
 
 export default function TextForm(props) {  // Change from textform to TextFortext
 const handleUpClick =()=>{
-  console.log("hanleupclick was invoked")
-  settext("hey i have clicked the button")
+  console.log("hanleupclick was invoked"+text);
+  let newtext=text.toUpperCase();
+
+  settext(newtext);
   
 }
-const handlechange =()=>{
-  console.log("hanlechange  was invoked")
+const handlechange =(event)=>{
+  console.log("hanlechange  was invoked");
+  settext(event.target.value);// allows to write more in the text feild
 }
   const[text,settext]=useState("enter the text1")//use of state variable
   //settext("Hey i have ste the text through settext function that i have defined using the state variable")
