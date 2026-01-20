@@ -35,6 +35,9 @@ const handlechange =(event)=>{
          <p>
         total number of words{text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length}and nuber of characters{text.length}.
          </p>
+         <p>
+          time to reead the text{0.008 * text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length} minutes
+         </p>
       </div>
     </div>
   )
