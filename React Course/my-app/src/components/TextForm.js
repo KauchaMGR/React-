@@ -38,6 +38,10 @@ const handlechange =(event)=>{
          <p>
           time to reead the text{0.008 * text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length} minutes
          </p>
+         <h2>preview</h2>
+         <p>
+          {text}
+         </p>
       </div>
     </div>
   )
