@@ -10,6 +10,13 @@ const handleUpClick =()=>{
   settext(newtext);
   
 }
+const handlelowClick =()=>{
+  // console.log("hanleupclick was invoked"+text);
+  let newtext=text.toLowerCase();
+
+  settext(newtext);
+  
+}
 const handlechange =(event)=>{
   // console.log("hanlechange  was invoked");
   settext(event.target.value);// allows to write more in the text feild
@@ -26,6 +33,9 @@ const handlechange =(event)=>{
         <br />
         <button className="btn btn-primary"  onClick={handleUpClick} >
           convert to upper case
+        </button>
+         <button className="btn btn-primary"  onClick={handlelowClick} >
+          convert to lower case
         </button>
       </div>
       <div className="container my-3">
