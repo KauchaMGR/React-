@@ -31,10 +31,10 @@ const handlechange =(event)=>{
         <textarea className="form-control" value={text} 
          onChange={handlechange} id="exampleFormControlTextarea1" rows="12"></textarea>
         <br />
-        <button className="btn btn-primary"  onClick={handleUpClick} >
+        <button className="btn btn-primary mx-4"  onClick={handleUpClick} >
           convert to upper case
         </button>
-         <button className="btn btn-primary"  onClick={handlelowClick} >
+         <button className="btn btn-primary mx-4"  onClick={handlelowClick} >
           convert to lower case
         </button>
       </div>
