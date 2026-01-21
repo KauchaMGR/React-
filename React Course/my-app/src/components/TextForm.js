@@ -19,6 +19,12 @@ const cleartext=()=>
   let newtext ="";
   settext(newtext);
 }
+
+const getfirst=()=>
+{
+  let newtext=text.split(" ")[0];
+  settext(newtext);
+}
   const[text,settext]=useState("enter the text1")//use of state variable
   //settext("Hey i have ste the text through settext function that i have defined using the state variable")
   return (
@@ -36,6 +42,7 @@ const cleartext=()=>
           convert to lower case
         </button>
         <button className="btn btn-primary mx=4" onClick={cleartext}>clear text</button>
+        <button className="btn btn-danger mx-4" onClick={getfirst}>Get  first word</button>
       </div>
       <div className="container my-3">
         <h1>
