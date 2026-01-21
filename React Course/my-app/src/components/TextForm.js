@@ -1,25 +1,23 @@
 import React,{useState}from 'react'
-
-
-
 export default function TextForm(props) {  // Change from textform to TextFortext
 const handleUpClick =()=>{
-  // console.log("hanleupclick was invoked"+text);
   let newtext=text.toUpperCase();
-
   settext(newtext);
   
 }
 const handlelowClick =()=>{
-  // console.log("hanleupclick was invoked"+text);
   let newtext=text.toLowerCase();
-
   settext(newtext);
   
 }
 const handlechange =(event)=>{
   // console.log("hanlechange  was invoked");
   settext(event.target.value);// allows to write more in the text feild
+}
+const cleartext=()=>
+{
+  let newtext ="";
+  settext(newtext);
 }
   const[text,settext]=useState("enter the text1")//use of state variable
   //settext("Hey i have ste the text through settext function that i have defined using the state variable")
@@ -37,6 +35,7 @@ const handlechange =(event)=>{
          <button className="btn btn-primary mx-4"  onClick={handlelowClick} >
           convert to lower case
         </button>
+        <button className="btn btn-primary mx=4" onClick={cleartext}>clear text</button>
       </div>
       <div className="container my-3">
         <h1>
