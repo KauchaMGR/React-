@@ -42,6 +42,7 @@ export default function about() {
     </div>
   </div>
 </div>
+   <div className="btn btn-primary my-3">Enable darkmode</div>
       
     </div>
   )
