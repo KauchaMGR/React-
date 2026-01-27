@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Navbar title="textutils" home="about home" news="about news" mode={mode} toggleMode={toggleMode} />
-       <Alert />
+       <Alert alert="hey guys " />
       {/* <div className="container "> <TextForm  heading="Hey enter the text here"/></div> */}
       <About />
      
