@@ -3,11 +3,13 @@ export default function TextForm(props) {  // Change from textform to TextFortex
 const handleUpClick =()=>{
   let newtext=text.toUpperCase();
   settext(newtext);
+  props.showAlert('Converted to Uppercase','success');
   
 }
 const handlelowClick =()=>{
   let newtext=text.toLowerCase();
   settext(newtext);
+  props.showAlert('Converted to lowercase','success');
   
 }
 const handlechange =(event)=>{
@@ -18,12 +20,14 @@ const cleartext=()=>
 {
   let newtext ="";
   settext(newtext);
+  props.showAlert('text cleared sucess fully','success');
 }
 
 const getfirst=()=>
 {
   let newtext=text.split(" ")[0];
   settext(newtext);
+  props.showAlert('first word is extracted succesfully','success');
 }
   const[text,settext]=useState("enter the text1")//use of state variable
   //settext("Hey i have ste the text through settext function that i have defined using the state variable")
