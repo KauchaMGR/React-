@@ -9,30 +9,45 @@ import Alert from './components/Alert';
 
 function App() {
   const [mode, setMode] = useState('light');
-  const [alert, setAlert] = useState(null); // 
+  const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
       ty: type,
-       timestamp: Date.now()
+      timestamp: Date.now()
     });
     setTimeout(() => {
       setAlert(null);
-    }, 1500);
+    }, 15000);
   }
   
-  const toggleMode = () => {
-    if (mode === 'light') {
+  const toggleMode = (mod) => {
+    if (mod === 'dark') {
       setMode('dark');
-      document.body.style.backgroundColor = '#212529';
-      document.body.style.color = 'white';
       showAlert('dark mode has been enabled', 'success');
-    } else {
+      document.body.style.backgroundColor = '#2d3033';
+      document.body.style.color = 'white';
+    } 
+    else if(mod=='light')
+    {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
       showAlert('light mode has been enabled', 'success');
+    }
+     else if(mod=='blue')
+    {
+      setMode('blue');
+      document.body.style.backgroundColor = '#0774e1';
+      document.body.style.color = 'black';
+      showAlert('blue mode has been enabled', 'success');
+    }
+    else{
+      setMode('green');
+      document.body.style.backgroundColor = '#39d715';
+      document.body.style.color = 'black';
+      showAlert('green mode has been enabled', 'success');
     }
   };
 
