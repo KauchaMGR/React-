@@ -5,6 +5,13 @@ import TextForm from './components/TextForm';
 import About from './components/about';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 
 function App() {
@@ -60,7 +67,7 @@ function App() {
       <Navbar title="textutils" home="about home" news="about news" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       {/* <div className="container "> <TextForm  heading="Hey enter the text here"/></div> */}
-      {/* <About /> */}
+       <About /> 
       <TextForm showAlert={showAlert} />
     </>
   );
