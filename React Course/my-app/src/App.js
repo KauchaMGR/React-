@@ -28,6 +28,7 @@ function App() {
       showAlert('dark mode has been enabled', 'success');
       document.body.style.backgroundColor = '#2d3033';
       document.body.style.color = 'white';
+      document.title="text utils -dark mode";
     } 
     else if(mod=='light')
     {
@@ -35,6 +36,7 @@ function App() {
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
       showAlert('light mode has been enabled', 'success');
+      document.title="text utils -light mode";
     }
      else if(mod=='blue')
     {
@@ -42,12 +44,14 @@ function App() {
       document.body.style.backgroundColor = '#0774e1';
       document.body.style.color = 'black';
       showAlert('blue mode has been enabled', 'success');
+      document.title="text utils -blue mode";
     }
     else{
       setMode('green');
       document.body.style.backgroundColor = '#39d715';
       document.body.style.color = 'black';
       showAlert('green mode has been enabled', 'success');
+      document.title="text utils -green mode";
     }
   };
 
