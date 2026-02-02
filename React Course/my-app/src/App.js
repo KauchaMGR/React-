@@ -63,19 +63,24 @@ function App() {
   };
 
   return (
-    <>
-   
-      {/* <Router>
-        <Navbar title="textutils" home="Home" news="About" mode={mode} toggleMode={toggleMode} />
+    <> <Navbar title="textutils" home="Home" news="About" mode={mode} toggleMode={toggleMode} />
         <div style={{ paddingTop: '70px' }}></div>
-         <Alert alert={alert}/>
-        <Routes> {/* Changed from Switch */}
-          
-          <Route path="/about" element={<About />} /> {/* Changed syntax */}
-          <Route path="/home" element={<TextForm showAlert={showAlert} />} /> {/* Changed syntax */}
-        </Routes>
-       
-      </Router> */}
+        <Alert alert={alert}/>
+        <TextForm showAlert={showAlert} />
+        {/* <About /> */}
+
+     {/* <About /> */}
+
+    {/* <Router>
+      <Navbar title="textutils" home="Home" news="About" mode={mode} toggleMode={toggleMode} />
+      <div style={{ paddingTop: '70px' }}></div>
+      <Alert alert={alert}/>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/home" element={<TextForm showAlert={showAlert} />} />
+      </Routes>
+    </Router> */}
+
     </>
   );
 }
