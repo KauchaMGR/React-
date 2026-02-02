@@ -5,12 +5,12 @@ import TextForm from './components/TextForm';
 import About from './components/about';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,  // Changed from Switch
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,  // Changed from Switch
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 
@@ -26,7 +26,7 @@ function App() {
     });
     setTimeout(() => {
       setAlert(null);
-    }, 15000);
+    }, 1500);
   }
   
   const toggleMode = (mod) => {
@@ -64,16 +64,18 @@ function App() {
 
   return (
     <>
-      <Router>
+   
+      {/* <Router>
         <Navbar title="textutils" home="Home" news="About" mode={mode} toggleMode={toggleMode} />
-        
-
+        <div style={{ paddingTop: '70px' }}></div>
+         <Alert alert={alert}/>
         <Routes> {/* Changed from Switch */}
+          
           <Route path="/about" element={<About />} /> {/* Changed syntax */}
           <Route path="/home" element={<TextForm showAlert={showAlert} />} /> {/* Changed syntax */}
         </Routes>
-       <Alert alert={alert}/>
-      </Router>
+       
+      </Router> */}
     </>
   );
 }
