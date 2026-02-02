@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,  // Changed from Switch
   Route,
   Link
 } from "react-router-dom";
@@ -64,11 +64,16 @@ function App() {
 
   return (
     <>
-      <Navbar title="textutils" home="about home" news="about news" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert}/>
-      {/* <div className="container "> <TextForm  heading="Hey enter the text here"/></div> */}
-       <About /> 
-      <TextForm showAlert={showAlert} />
+      <Router>
+        <Navbar title="textutils" home="Home" news="About" mode={mode} toggleMode={toggleMode} />
+        
+
+        <Routes> {/* Changed from Switch */}
+          <Route path="/about" element={<About />} /> {/* Changed syntax */}
+          <Route path="/home" element={<TextForm showAlert={showAlert} />} /> {/* Changed syntax */}
+        </Routes>
+       <Alert alert={alert}/>
+      </Router>
     </>
   );
 }
