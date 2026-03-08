@@ -20,8 +20,8 @@ export class news extends Component {
     super();
     console.log("hewy its me dipeen kaucha magar" );
     this.state={
-      articles=this.articles,
-      loading=false
+      articles:this.articles,
+      loading:false
     }
   }
   render() {
@@ -29,21 +29,14 @@ export class news extends Component {
       <div className='Container my-10'>
     <h1>News Monkey Headlines</h1>
     <div className='row my-4'>
-        <div className="col-md-3">
-            <Newsitem title="war" description="war is going on" url="https://assets2.cbsnewsstatic.com/hub/i/r/2026/03/04/aeafb2b3-6d1d-4db6-8db1-5a62cfeb2b3d/thumbnail/1200x630/c1d73beedc13b24772a36c000ea91f54/iran-war-tehran-2264172660.jpg" />
+      {this.state.articles.map ((elements)=>{
+        return <div className="col-md-3" key={elements.url}>
+            <Newsitem title={elements.title} description={elements.description}url={elements.url} newsUrl={elements.newsUrl} />
         </div>
-        <div className="col-md-3">
-            <Newsitem title="war" description="war is going on" />
-        </div>
-        <div className="col-md-3">
-            <Newsitem title="war" description="war is going on" />
-        </div>
-        <div className="col-md-3">
-            <Newsitem title="war" description="war is going on" />
-        </div>
+      })}
+        
+       
     </div>
-        
-        
       </div>
     )
   }
