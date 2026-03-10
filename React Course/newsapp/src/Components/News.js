@@ -52,7 +52,17 @@ export class news extends Component {
       articles:this.articles,
       loading:false
     }
-  }
+     
+
+     }
+     async componentDidMount(){
+       console.log("i was invoked after the constructor  ");
+       let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=beec25a0b33a4ceea4db93d7be57cae5"
+       let data =await fetch(url);
+       let parsed_data= await data.json();
+       this.setState({articles:parsed_data.articles});
+       console.log(parsed_data);
+      }
   render() {
     return (
       <div className='Container my-10'>
