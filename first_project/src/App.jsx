@@ -1,13 +1,20 @@
-import { useState } from 'react'; // Fixed: Imported useState and added quotes
+import { useState } from 'react';
 import Card from './Components/Card.jsx'; 
+import Header from './Components/Layouts/Header.jsx';
+import Footer from './Components/Layouts/Footer.jsx';
 
 function App() { 
-  const [count, setCount] = useState(0); // Works perfectly now
+
   
   return ( 
+    const [theme,setTheme]=useState('Light');
     <> 
-      <h1>Hello</h1> 
-      <Card></Card> 
+      
+
+      <Header></Header>
+      <Card name="Dipeen kaucha Magar" desc="Hello k xa khabar yrr" img="heheh.jpg"></Card>
+      <Footer></Footer>
+      
     </> 
   ); 
 } 
